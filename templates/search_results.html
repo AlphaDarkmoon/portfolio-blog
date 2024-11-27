@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% elif page_obj and page_obj.object_list %}
+        <p>Results for "<strong>{{ query }}</strong>":</p>
+        <ul>
+        {% for post in page_obj.object_list %}
+            <li>
+                <a href="{% url 'post' post.id %}">{{ post.postname }}</a>
+                <p>Category: {{ post.category }}</p>
+            </li>
+        {% endfor %}
+        </ul>
+
+        <!-- Pagination -->
+        <div class="pagination">
+            {% if page_obj.has_previous %}
+                <a href="?q={{ query }}&page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <strong>{{ num }}</strong>
+                {% else %}
+                    <a href="?q={{ query }}&page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+            {% if page_obj.has_next %}
+                <a href="?q={{ query }}&page={{ page_obj.next_page_number }}">Next</a>
+            {% endif %}
+        </div>
+    {% else %}
+        <p>No results found for "{{ query }}".</p>
+    {% endif %}
+
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>
