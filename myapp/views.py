@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from django.contrib.auth.models import User,auth
 from django.contrib.auth import authenticate
 from django.contrib import messages
@@ -10,16 +10,31 @@ from django.db.models import Q
 from django.core.paginator import Paginator
 
 from .models import Comment,Post
+from .forms import NewsletterSubscriptionForm
 
+from django.shortcuts import render, redirect
+from .forms import NewsletterSubscriptionForm
 
 def github(request):
-    return render(request,"github.html",{
-        'posts':Post.objects.filter(user_id=request.user.id).order_by("id").reverse(),
-        'top_posts':Post.objects.all().order_by("-likes"),
-        'recent_posts':Post.objects.all().order_by("-id"),
-        'user':request.user,
-        'media_url':settings.MEDIA_URL
+    # Handle form submission
+    if request.method == 'POST':
+        form = NewsletterSubscriptionForm(request.POST)
+        if form.is_valid():
+            form.save()  # Save the email to the database
+            return redirect('blogs:confirmation')  # Redirect to the confirmation page after saving
+    else:
+        form = NewsletterSubscriptionForm()
+
+    # Return the main page with the form (in case it's a GET request)
+    return render(request, "github.html", {
+        'posts': Post.objects.filter(user_id=request.user.id).order_by("id").reverse(),
+        'top_posts': Post.objects.all().order_by("-likes"),
+        'recent_posts': Post.objects.all().order_by("-id"),
+        'user': request.user,
+        'media_url': settings.MEDIA_URL,
+        'form': form  # Pass the form to the template
     })
+
 
 
 def search(request):
@@ -73,16 +88,18 @@ def blog(request):
     
     
 
-
-def post(request,id):
-    post = Post.objects.get(id=id)
+def post(request, slug):  # Use slug instead of id
+    post = get_object_or_404(Post, slug=slug)
     
-    return render(request,"git-posts.html",{
-        "user":request.user,
-        'post':Post.objects.get(id=id),
-        'recent_posts':Post.objects.all().order_by("-id"),
-        'media_url':settings.MEDIA_URL,
-        'comments':Comment.objects.filter(post_id = post.id),
-        'total_comments': len(Comment.objects.filter(post_id = post.id))
+    return render(request, "git-posts.html", {
+        "user": request.user,
+        "post": post,
+        "recent_posts": Post.objects.all().order_by("-id"),
+        "media_url": settings.MEDIA_URL,
+        "comments": Comment.objects.filter(post_id=post.id),
+        "total_comments": len(Comment.objects.filter(post_id=post.id))
     })
     
+def confirmation(request):
+    return render(request, "confirmation.html")
+

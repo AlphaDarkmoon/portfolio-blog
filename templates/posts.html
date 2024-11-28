@@ -767,7 +767,7 @@
 							<div class="mb-1"><a class="f5-mktg text-gradient-purple-coral text-bold pb-1 position-relative z-2">{{post.category}}</a></div>
 							<h3 class="h6-mktg mb-2">
 								<a class="Link--primary card__link"
-								   href="{% url 'blogs:post' post.id %}"
+								   href="{% url 'blogs:post' slug=post.slug %}"
 								   target="_self">
 									{{ post.postname }} </a>
 							</h3>

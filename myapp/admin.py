@@ -17,3 +17,14 @@ class PostAdmin(admin.ModelAdmin):
     list_display = ('postname', 'category', 'time', 'likes', 'user')
     search_fields = ('postname', 'category', 'content')
     list_filter = ('category', 'time', 'user')
+
+from django.contrib import admin
+from .models import NewsletterSubscription
+
+class NewsletterSubscriptionAdmin(admin.ModelAdmin):
+    list_display = ('email', 'subscribed_at')  # Columns to display in the admin list view
+    search_fields = ('email',)  # Allow searching by email address
+    list_filter = ('subscribed_at',)  # Filter by subscription date
+    ordering = ('-subscribed_at',)  # Order by subscription date, newest first
+
+admin.site.register(NewsletterSubscription, NewsletterSubscriptionAdmin)

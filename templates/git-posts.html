@@ -867,7 +867,7 @@
 								class="f5-mktg text-gradient-purple-coral text-bold pb-1 position-relative z-2">{{post.category}}</a></div>
 						<h3 class="h6-mktg mb-2">
 							<a class="Link--primary card__link"
-								href="{% url 'blogs:post' post.id %}"
+								href="{% url 'blogs:post' slug=post.slug %}"
 								target="_self">
 								{{post.postname}} </a>
 						</h3>
@@ -881,7 +881,7 @@
 		</section>
 
 		<!-- NewsLatter -->
-		{% comment %} <div class="py-6 py-lg-8 color-bg-subtle" data-color-mode="dark" data-light-theme="light"
+		<div class="py-6 py-lg-8 color-bg-subtle" data-color-mode="dark" data-light-theme="light"
 			data-dark-theme="dark">
 			<div class="container-xl p-responsive-blog">
 				<section id="newsletter" class="newsletter rounded-2">
@@ -921,12 +921,8 @@
 									</div>
 									<div class="form-checkbox color-fg-muted f6-mktg m-0 mt-2 form-group">
 										<label class="text-normal">
-											<input id="optincheckbox" name="marketingEmailOptIn1" type="checkbox"
-												value="True">
-											Yes please, I’d like GitHub and affiliates to use my information for
-											personalized communications, targeted advertising and campaign
-											effectiveness. See the <a href="https://github.com/site/privacy"
-												target="blank">GitHub Privacy Statement</a> for more details. </label>
+											By subscribing to our newsletter campaign, you consent to receive updates, the latest posts, and helpful tips via email. Additionally, you agree to the use of your email address for personalized advertising purposes.
+										</label>
 									</div>
 									<button type="submit"
 										class="js-form-validator-submit newsletter-submit flex-shrink-0 arrow-target-mktg mt-3 d-flex d-md-none flex-row f3-mktg flex-items-center text-semibold rounded-2">
@@ -946,7 +942,7 @@
 					</div>
 				</section>
 			</div>
-		</div> {% endcomment %}
+		</div>
 	</main>
 
 
@@ -1096,7 +1092,7 @@
 	<script>
         function copyLink() {
             // Construct the post URL dynamically
-            const postUrl = `${window.location.origin}/post/{{ post.id }}`;
+            const postUrl = `${window.location.origin}/post/{{ post.slug }}`;
             // Copy to clipboard
             navigator.clipboard.writeText(postUrl).then(() => {
                 alert("Link copied to clipboard!");
