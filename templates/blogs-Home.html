@@ -6,7 +6,7 @@
 	<!-- 
     HTML Page: Yash-Insights
     Author: Yash ( [github] AlphaDarkmoon )
-    Description: Blogs Website,sub-branch of Yash's Portfolio {https://alphadarkmoon.github.io/yash-portfolio/}.
+    Description: Blogs Website,sub-branch of Yash's Portfolio {'portfolio:portfolio'}.
 
     External Resources Credits:
     - GitHub assets: https://github.githubassets.com/
@@ -575,16 +575,23 @@
 </head>
 
 <body class="home page-template-default page page-id-78933 font-mktg no-sidebar">
-
-    <!-- NevBar-->
-
-    <div data-color-mode="dark" data-light-theme="light" data-dark-theme="dark" class="pt-header pt-lg-0">
+	<div data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark" class="pt-header pt-lg-0">
 		<header id="header"
 			class="header position-fixed position-lg-static pb-lg-header z-4 top-0 left-0 right-0 d-flex flex-column flex-items-stretch color-bg-default">
 			<a href="#start-of-content" class="p-3 color-bg-accent-emphasis color-fg-on-emphasis show-on-focus">
 				Skip to content </a>
 			<div class="position-relative container-xl width-full mx-auto p-responsive-blog">
 				<div class="d-flex flex-items-center flex-justify-between pt-3 pb-3 color-fg-default">
+					<a href="https://github.com" target="_blank" rel="noreferrer" aria-label="GitHub homepage"
+						class="Header-link position-relative d-flex flex-items-center color-fg-default">
+						<svg aria-hidden="true" role="presentation" class="nav-back-arrow position-absolute d-block"
+							viewBox="0 0 24 24" width="32" height="32" fill="currentColor">
+							<path fill-rule="evenodd"
+								d="M15.28 5.22a.75.75 0 00-1.06 0l-6.25 6.25a.75.75 0 000 1.06l6.25 6.25a.75.75 0 101.06-1.06L9.56 12l5.72-5.72a.75.75 0 000-1.06z">
+							</path>
+						</svg>
+						
+					</a>
 					<a class="d-inline-block Header-link font-weight-semibold ml-2 f2 color-fg-default"
 						href="{% url 'blogs:blogs-home' %}">
 						Yash's Blogs</a>
@@ -607,13 +614,12 @@
 							
 						</ul>
 					</nav>
-
 					<div class="d-none d-lg-flex flex-1">
 						<form id="desktop-search" class="desktop-search position-relative ml-lg-4 flex-1"
 							action="{% url 'blogs:search' %}" method="get" aria-hidden="true" aria-label="Search form"
 							role="search">
 							<div class="position-relative d-flex flex-1 height-full color-bg-transparent"
-								data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+								data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark">
 								<input aria-label="Search the blog" type="search"
 									class="p-2 pl-3 pr-6 border-0 rounded-2 flex-1" placeholder="Search the blog…"
 									value="" name="q" id="search-input">
@@ -689,8 +695,8 @@
 			<form id="mobile-search" role="search" method="get" class="mobile-search" action="{% url 'blogs:search' %}"
 				aria-hidden="true" aria-label="Search form">
 				<div class="d-flex flex-1 p-3 color-bg-inset">
-					<div class="d-flex flex-1 position-relative color-bg-transparent" data-color-mode="light"
-						data-light-theme="light" data-dark-theme="dark">
+					<div class="d-flex flex-1 position-relative color-bg-transparent" data-color-mode="dark"
+						data-light-theme="dark" data-dark-theme="dark">
 						<svg height="20" class="d-flex position-absolute z-3 octicon height-full ml-2 color-fg-subtle"
 							aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="20" role="img">
 							<path fill-rule="evenodd"
@@ -707,25 +713,22 @@
 				</div>
 			</form>
 			<nav id="mobile-menu" class="mobile-menu position-relative overflow-y-auto flex-1 width-full rounded-top-3"
-				aria-label="Navigation menu" aria-hidden="true" data-color-mode="light" data-light-theme="light"
+				aria-label="Navigation menu" aria-hidden="true" data-color-mode="dark" data-light-theme="dark"
 				data-dark-theme="dark_dimmed">
 				<div class="p-5">
-					<h2 class="mb-5 text-bold color-fg-subtle">Categories</h2>
-					<ul id="menu-secondary-navigation" class="pt-5 border-top list-style-none">
-							<li id="menu-item-78809"><a href="{% url 'blogs:blogs-home' %}"
-									class="position-relative d-flex flex-items-center flex-start no-wrap py-2 px-4 f4 lh-condensed-ultra Link--secondary color-fg-default text-medium">Home</a>
-							</li>
-							<li id="menu-item-78811"><a href="{% url 'blogs:posts' %}"
-								class="position-relative d-flex flex-items-center flex-start no-wrap py-2 px-4 f4 lh-condensed-ultra Link--secondary color-fg-default text-medium">Posts
-								<svg viewBox="0 0 16 16" width="16" height="16"
-									class="octicon octicon-chevron-down position-absolute right-0 d-block ml-1 mt-1"
-									role="presentation">
-									<path
-										d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z">
-									</path>
-								</svg></a></li>
-							
-						</ul>
+					<ul id="menu-secondary-navigation" class="pt-0  list-style-none">
+						<li id="menu-item-78809"><a href="{% url 'blogs:blogs-home' %}"
+							class="position-relative d-flex flex-items-center flex-start no-wrap py-2 px-4 f4 lh-condensed-ultra Link--secondary color-fg-default text-medium">Home</a>
+					</li>
+					<li id="menu-item-78811"><a href="{% url 'blogs:posts' %}"
+						class="position-relative d-flex flex-items-center flex-start no-wrap py-2 px-4 f4 lh-condensed-ultra Link--secondary color-fg-default text-medium">Posts
+						<svg viewBox="0 0 16 16" width="16" height="16"
+							class="octicon octicon-chevron-down position-absolute right-0 d-block ml-1 mt-1"
+							role="presentation">
+							<path
+								d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z">
+							</path>
+						</svg></a></li>
 					</ul> <a data-analytics-click="Blog, click on button, text: Contact sales; ref_location:top nav;"
 						class="d-block no-wrap my-3 btn-mktg btn-muted-mktg font-weight-semibold"
 						href="{% url 'portfolio:portfolio' %}">My Portfolio</a>
@@ -733,52 +736,34 @@
 			</nav>
 		</header>
 	</div>
-
-    <!-- NevBar Ends -->
-
+	
 
 	<main id="start-of-content">
-        {% if error %}
-        <p style="color: red;">{{ error }}</p>
-        {% elif page_obj and page_obj.object_list %}
-		<div class="mb-6 mb-lg-8">
-			<header data-color-mode="dark" data-light-theme="light" data-dark-theme="dark_dimmed"
-				class="archive-header">
-				<div class="container-xl mx-auto p-responsive-blog">
-					<div class="col-md-7">
-						<div class="py-5 pb-md-8 pt-md-6">
-							
-							<h1 class="h3-mktg lh-condensed color-fg-default">
-								Search results for: <span class="text-semibold text-italic">{{ query }}</span> </h1>
-						</div>
-					</div>
-				</div>
-			</header>
-		</div>
-		<div class="container-xl mx-auto p-responsive-blog">
-			<div class="mb-8 mb-lg-10">
-				<div class="post-columns post-columns--3-3">
-                    {% for post in page_obj.object_list %}
-					<article class="color-border-muted card">
-						<div class="d-flex flex-column">
-							<div class="d-block col-12 position-relative rounded-2 mb-3 overflow-hidden tease-thumbnail"
-								target="_self">
+		<h1 class="screen-reader-text">
+			Blog</h1>
+		<div class="py-7 pb-md-8 pb-lg-9 has-glow" data-color-mode="dark" data-light-theme="dark"
+			data-dark-theme="dark">
+			<div class="position-relative container-xl mx-auto p-responsive-blog">
+				<section>
+					<div class="post-columns post-columns--4-2">
+						{% for post in recent_posts|slice:":1" %}
+						<article class="d-flex flex-column height-lg-full color-border-muted card">
+							<div
+								class="d-block col-12 position-relative rounded-2 mb-3 mb-md-4 overflow-hidden tease-thumbnail">
 								<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block"
 									role="presentation"></svg>
-								<img width="400" height="212" src="{{media_url}}{{post.image}}"
+								<img width="800" height="425" src="{{ post.thumbnail.url }}"
 									class="d-block cover-image tease-thumbnail__img wp-post-image" alt=""
-									decoding="async" loading="lazy"
-									sizes="(max-width: 400px) 100vw, 400px">
+									decoding="async" sizes="(max-width: 800px) 100vw, 800px" loading="lazy">
 							</div>
 							<div class="mb-1"><a 
 									class="f5-mktg text-gradient-purple-coral text-bold pb-1 position-relative z-2">{{post.category}}</a></div>
-							<h3 class="h6-mktg mb-2">
-								<a class="Link--primary card__link"
-									href="{% url 'blogs:post' slug=post.slug %}"
-									target="_self">
-									{{ post.postname }} </a>
+							<h3 class="h3-mktg mb-2">
+								<a href="{% url 'blogs:post' slug=post.slug %}"
+									class="Link--primary card__link">
+									{{post.postname}} </a>
 							</h3>
-							<div class="f4-mktg color-fg-muted">
+							<div class="mb-2 f4-mktg color-fg-muted">
 								<p>{{post.content|slice:"0:100"|safe}}...</p>
 							</div>
 							<footer>
@@ -790,55 +775,663 @@
 									</span>
 								</div>
 							</footer>
-						</div>
-					</article>
-                    {% endfor %}
-				</div>
-				<div
-					class="d-flex flex-justify-center flex-items-center flex-wrap paginate-container mt-6 mb-0 pt-5 border-top color-border-muted text-bold">
+						</article>
+						{% endfor %}
 
-					<nav class="navigation pagination" aria-label="Posts">
-                        <h2 class="screen-reader-text">Posts navigation</h2>
-                        <div class="nav-links">
-                            {% if page_obj.has_previous %}
-                                <a class="prev_page page-numbers" href="?q={{ query }}&page={{ page_obj.previous_page_number }}">Previous</a>
-                            {% endif %}
-                    
-                            {% for num in page_obj.paginator.page_range %}
-                                {% if num == page_obj.number %}
-                                    <!-- Highlight the current page -->
-                                    <span aria-current="page" class="page-numbers current">
-                                        <span class="meta-nav screen-reader-text">Page </span>{{ num }}
-                                     </span>
-                                     
-                                {% elif num == 1 or num == page_obj.paginator.num_pages %}
-                                    <!-- Always show the first and last pages -->
-                                    <a class="page-numbers" href="?q={{ query }}&page={{ num }}">
-                                        <span class="meta-nav screen-reader-text">Page </span>{{ num }}
-                                    </a>
-                                {% elif forloop.first or forloop.last %}
-                                    <!-- Add ellipsis for skipped ranges -->
-                                    <span class="page-numbers dots gap">…</span>
-                                {% endif %}
-                            {% endfor %}
-                    
-                            {% if page_obj.has_next %}
-                                <a class="next_page page-numbers" href="?q={{ query }}&page={{ page_obj.next_page_number }}">Next</a>
-                            {% endif %}
-                        </div>
-                    </nav>
-                    
-                    
-                    
+						{% for post in recent_posts|slice:"1:4" %}
+						<article class="color-border-muted card">
+							<div class="d-flex flex-column flex-sm-row flex-sm-nowrap gutter-14px">
+								<div class="col-12 col-lg-5 square-thumb-wrap mb-3 mb-sm-0">
+									<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
+										<svg aria-hidden="true" width="168" height="168"
+											class="width-full height-auto d-none d-sm-block" role="presentation"></svg>
+										<img width="200" height="200" src="{{ post.thumbnail.url }}"
+											class="d-none d-sm-block cover-image tease-thumbnail__img wp-post-image"
+											alt="" decoding="async" loading="lazy"
+											sizes="(max-width: 200px) 100vw, 200px"> <svg aria-hidden="true"
+											width="1032" height="548" class="width-full height-auto d-block d-sm-none"
+											role="presentation"></svg>
+										<img width="400" height="212" src="{{ post.thumbnail.url }}" loading="lazy"
+											class="d-block d-sm-none cover-image tease-thumbnail__img wp-post-image"
+											alt="" decoding="async"
+											sizes="(max-width: 400px) 100vw, 400px">
+									</div>
+								</div>
+								<div class="col-12 col-lg-8">
+									<div class="mb-1"><a 
+											class="f5-mktg text-gradient-purple-coral text-bold pb-1 position-relative z-2">{{post.category}}</a>
+									</div>
+									<h3 class="h6-mktg mb-2">
+										<a href="{% url 'blogs:post' slug=post.slug %}"
+											class="Link--primary card__link">
+											{{post.postname}}</a>
+									</h3>
+									<div class="f4-mktg color-fg-muted">
+										<p>{{post.content|slice:"0:80"|safe}}...</p>
+									</div>
+									<footer>
+										<div class="d-flex flex-items-center mb-6px">
+											<span>
+												<span class="mx-1 color-fg-muted"><i class="fa fa-calendar-o"></i></span>
+												<time datetime="2024-11-20"
+													class="text-mono color-fg-muted no-wrap">{{post.time}} </time>
+											</span>
+										</div>
+									</footer>
+								</div>
+							</div>
+						</article>
+						{% endfor %}
+					</div>
+				</section>
+				<div class="mt-7 mt-lg-8">
+					<section id="newsletter" class="newsletter rounded-2">
+						<div class="color-bg-default rounded-2">
+							<div class="d-flex flex-row flex-wrap gutter-spacious py-5 px-4 py-md-6 px-md-5">
+								<div class="col-12 col-lg-6 col-xl-7">
+									<h2 class="h4-mktg color-fg-default"> We do newsletters, too</h2>
+									<p class="f3-mktg color-fg-muted mt-2 mb-3">Discover tips, technical guides, and
+										best practices in our biweekly newsletter just for devs.</p>
+								</div>
+								<div class="col-12 col-lg-6 col-xl-5">
+									<form method="post"
+									action="{% url 'blogs:blogs-home' %}" class="js-form-validator">
+									{% csrf_token %}
+										<div
+											class="newsletter-form d-md-flex flex-row mt-0 mb-3 rounded-2 required form-group">
+											{{ form.as_p }}
+											<input type="hidden" name="classification" value="Practitioner">
+											<button type="submit"
+												class="js-form-validator-submit newsletter-submit flex-shrink-0 arrow-target-mktg d-none d-md-flex flex-row f3-mktg flex-items-center text-semibold rounded-2">
+												<span>Subscribe</span>
+												<svg xmlns="http://www.w3.org/2000/svg"
+													class="octicon arrow-symbol-mktg" width="24" height="24"
+													viewBox="0 0 16 16" fill="none">
+													<path fill="currentColor"
+														d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+													</path>
+													<path class="octicon-chevrow-stem" stroke="currentColor"
+														d="M1.75 8H11" stroke-width="1.5" stroke-linecap="round"></path>
+												</svg>
+											</button>
+										</div>
+										<div class="form-checkbox color-fg-muted f6-mktg m-0 mt-2 form-group">
+											<label class="text-normal">
+												By subscribing to our newsletter campaign, you consent to receive updates, the latest posts, and helpful tips via email. Additionally, you agree to the use of your email address for personalized advertising purposes.
+											</label>
+										</div>
+										<button type="submit"
+											class="js-form-validator-submit newsletter-submit flex-shrink-0 arrow-target-mktg mt-3 d-flex d-md-none flex-row f3-mktg flex-items-center text-semibold rounded-2">
+											<span>Subscribe</span>
+											<svg xmlns="http://www.w3.org/2000/svg" class="octicon arrow-symbol-mktg"
+												width="24" height="24" viewBox="0 0 16 16" fill="none">
+												<path fill="currentColor"
+													d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+												</path>
+												<path class="octicon-chevrow-stem" stroke="currentColor" d="M1.75 8H11"
+													stroke-width="1.5" stroke-linecap="round"></path>
+											</svg>
+										</button>
+
+
+									</form>
+								</div>
+							</div>
+						</div>
+					</section>
 				</div>
 			</div>
-            {% else %}
-        <p>No results found for "{{ query }}".</p>
-    {% endif %}
 		</div>
+
+		<div class="py-7 py-md-8 py-lg-9" data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark_dimmed">
+			<div class="container-xl mx-auto p-responsive-blog color-fg-default">
+				<section>
+					<header class="section-heading d-flex flex-items-center flex-justify-between mb-4 mb-lg-7">
+						<h2 class="h6-mktg">Other Posts</h2>
+					</header>
+					<div class="post-columns post-columns--5-3">
+						{% for post in top_posts|slice:"3:4" %}
+						<article class="d-flex flex-column height-lg-full color-border-muted card">
+							<div
+								class="d-block col-12 position-relative rounded-2 mb-3 mb-md-4 overflow-hidden tease-thumbnail">
+								<svg aria-hidden="true" width="1032" height="548"
+									class="width-full height-auto d-block d-md-none" role="presentation"></svg>
+								<img width="800" height="425" src="{{ post.thumbnail.url }}" loading="lazy"
+									class="d-block d-md-none cover-image tease-thumbnail__img wp-post-image"
+									alt="Image"
+									decoding="async"
+									sizes="(max-width: 800px) 100vw, 800px"> <svg aria-hidden="true" width="600"
+									height="600" class="width-full height-auto d-none d-md-block"
+									role="presentation"></svg>
+								<img width="600" height="600" src="{{ post.thumbnail.url }}" loading="lazy"
+									class="d-none d-md-block cover-image tease-thumbnail__img" alt="" decoding="async"
+									sizes="(max-width: 600px) 100vw, 600px">
+							</div>
+							<h3 class="h3-mktg mb-2">
+								<a href="{% url 'blogs:post' slug=post.slug %}"
+									class="Link--primary card__link">
+									{{post.postname}} </a>
+							</h3>
+							<div class="mb-2 f4-mktg color-fg-muted">
+								<p>{{post.content|slice:"0:100"|safe}}...</p>
+							</div>
+							<footer>
+								<div class="d-flex flex-items-center mb-6px">
+									<span>
+										<span class="mx-1 color-fg-muted"><i class="fa fa-calendar-o"></i></span>
+										<time datetime="2024-11-20"
+											class="text-mono color-fg-muted no-wrap">{{post.time}} </time>
+									</span>
+								</div>
+							</footer>
+						</article>
+						{% endfor %}
+
+						{% for post in top_posts|slice:"5:9" %}
+						<article class="color-border-muted card">
+							<div class="d-flex flex-column">
+								<div class="d-block col-12 position-relative rounded-2 mb-3 overflow-hidden tease-thumbnail"
+									target="_self">
+									<svg aria-hidden="true" width="1032" height="548"
+										class="width-full height-auto d-block" role="presentation"></svg>
+									<img width="400" height="212" src="{{ post.thumbnail.url }}" loading="lazy"
+										class="d-block cover-image tease-thumbnail__img wp-post-image" alt=""
+										decoding="async"
+										sizes="(max-width: 400px) 100vw, 400px">
+								</div>
+								<h3 class="h6-mktg mb-2">
+									<a class="Link--primary card__link"
+										href="{% url 'blogs:post' slug=post.slug %}"
+										target="_self">
+										{{post.postname}} </a>
+								</h3>
+								<div class="f4-mktg color-fg-muted">
+									<p>{{post.content|slice:"0:100"|safe}}...</p>
+								</div>
+								<footer>
+									<div class="d-flex flex-items-center mb-6px">
+										<span>
+											<span class="mx-1 color-fg-muted"><i class="fa fa-calendar-o"></i></span>
+											<time datetime="2024-11-20"
+												class="text-mono color-fg-muted no-wrap">{{post.time}} </time>
+										</span>
+									</div>
+								</footer>
+							</div>
+						</article>
+						{% endfor %}
+
+					</div>
+					{% comment %} <div class="mt-5 text-right d-lg-none">
+						<a href="https://github.blog/engineering/" target="_self"
+							class="Link--primary arrow-target-mktg text-semibold">More<svg
+								viewBox="0 0 16 16" width="24" height="24" class="octicon arrow-symbol-mktg ml-1"
+								role="presentation">
+								<path
+									d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+								</path>
+								<path class="octicon-chevrow-stem" stroke="currentColor" d="M1.75 8H11"
+									stroke-width="1.5" stroke-linecap="round"></path>
+							</svg></a>
+					</div> {% endcomment %}
+				</section>
+			</div>
+		</div>
+
+		<!-- Future Use -->
+		{% comment %} <div class="py-7 py-md-8 py-lg-9">
+			<div class="container-xl mx-auto p-responsive-blog">
+				<section>
+					<header class="section-heading d-flex flex-items-center flex-justify-between mb-4 mb-lg-7">
+						<h2 class="h6-mktg">News &amp; insights</h2>
+						<div class="d-none d-lg-flex flex-items-center">
+							<a href="https://github.blog/news-insights/" target="_self"
+								class="Link--primary arrow-target-mktg text-semibold">More News &amp; insights
+								articles<svg viewBox="0 0 16 16" width="24" height="24"
+									class="octicon arrow-symbol-mktg ml-1" role="presentation">
+									<path
+										d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+									</path>
+									<path class="octicon-chevrow-stem" stroke="currentColor" d="M1.75 8H11"
+										stroke-width="1.5" stroke-linecap="round"></path>
+								</svg></a>
+						</div>
+					</header>
+					<div class="post-columns post-columns--2-2">
+						<article class="color-border-muted card">
+							<div class="d-flex flex-column flex-sm-row flex-sm-nowrap gutter-14px">
+								<div class="col-12 col-lg-5 square-thumb-wrap mb-3 mb-sm-0">
+									<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
+										<svg aria-hidden="true" width="168" height="168"
+											class="width-full height-auto d-none d-sm-block" role="presentation"></svg>
+										<img width="200" height="200" src="images/Proof_32365_BlogHeader_v1b_1.png" loading="lazy"
+											class="d-none d-sm-block cover-image tease-thumbnail__img wp-post-image"
+											alt="" decoding="async"
+											srcset="images/Proof_32365_BlogHeader_v1b_2.png 150w, images/Proof_32365_BlogHeader_v1b_14.png 600w, images/Proof_32365_BlogHeader_v1b_3.png 400w, images/Proof_32365_BlogHeader_v1b_11.png 200w, images/Proof_32365_BlogHeader_v1b_9.png 90w, images/Proof_32365_BlogHeader_v1b_10.png 116w"
+											sizes="(max-width: 200px) 100vw, 200px"> <svg aria-hidden="true"
+											width="1032" height="548" class="width-full height-auto d-block d-sm-none"
+											role="presentation"></svg>
+										<img width="400" height="212" src="images/Proof_32365_BlogHeader_v1b.png" loading="lazy"
+											class="d-block d-sm-none cover-image tease-thumbnail__img wp-post-image"
+											alt="" decoding="async"
+											srcset="images/Proof_32365_BlogHeader_v1b_5.png 1600w, images/Proof_32365_BlogHeader_v1b_4.png 300w, images/Proof_32365_BlogHeader_v1b_12.png 768w, images/Proof_32365_BlogHeader_v1b_15.png 1024w, images/Proof_32365_BlogHeader_v1b_6.png 1536w, images/Proof_32365_BlogHeader_v1b_13.png 800w, images/Proof_32365_BlogHeader_v1b_3.png 400w, images/Proof_32365_BlogHeader_v1b_7.png 1032w, images/Proof_32365_BlogHeader_v1b_8.png 516w"
+											sizes="(max-width: 400px) 100vw, 400px">
+									</div>
+								</div>
+								<div class="col-12 col-lg-8">
+									<h3 class="h6-mktg mb-2">
+										<a href="https://github.blog/news-insights/company-news/celebrating-the-github-awards-2024-recipients/"
+											class="Link--primary card__link">
+											Celebrating the GitHub Awards 2024 recipients 🎉 </a>
+									</h3>
+									<div class="f4-mktg color-fg-muted">
+										<p>The GitHub Awards celebrates the outstanding contributions and achievements
+											in the developer community by honoring individuals, projects, and
+											organizations for creating an outsized positive impact on the community.</p>
+									</div>
+									<footer>
+										<div class="d-flex flex-items-center mb-6px">
+											<span>
+												<span class="text-bold">
+													<a href="https://github.blog/author/lclindeman/"
+														title="Posts by Laura Lindeman"
+														class="author url fn Link--primary no-wrap position-relative z-2"
+														rel="author">Laura Lindeman</a> &amp; <a
+														href="https://github.blog/author/leereilly/"
+														title="Posts by Lee Reilly"
+														class="author url fn Link--primary no-wrap position-relative z-2"
+														rel="author">Lee Reilly</a> </span>
+												<span class="mx-1 color-fg-muted">·</span>
+												<time datetime="2024-10-30"
+													class="text-mono color-fg-muted no-wrap">October 30, 2024</time>
+											</span>
+										</div>
+									</footer>
+								</div>
+							</div>
+						</article>
+						<article class="color-border-muted card">
+							<div class="d-flex flex-column flex-sm-row flex-sm-nowrap gutter-14px">
+								<div class="col-12 col-lg-5 square-thumb-wrap mb-3 mb-sm-0">
+									<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
+										<svg aria-hidden="true" width="168" height="168"
+											class="width-full height-auto d-none d-sm-block" role="presentation"></svg>
+										<img width="200" height="200" src="images/copilot-square.png" loading="lazy"
+											class="d-none d-sm-block cover-image tease-thumbnail__img" alt=""
+											decoding="async"
+											srcset="images/copilot-square_8.png 1000w, images/copilot-square_1.png 150w, images/copilot-square_9.png 300w, images/copilot-square_7.png 768w, images/copilot-square_6.png 600w, images/copilot-square_4.png 400w, images/copilot-square_3.png 200w, images/copilot-square_2.png 90w, images/copilot-square_5.png 116w"
+											sizes="(max-width: 200px) 100vw, 200px"> <svg aria-hidden="true"
+											width="1032" height="548" class="width-full height-auto d-block d-sm-none"
+											role="presentation"></svg>
+										<img width="400" height="212" src="images/universe-day1-header.png" loading="lazy"
+											class="d-block d-sm-none cover-image tease-thumbnail__img wp-post-image"
+											alt="" decoding="async"
+											srcset="images/universe-day1-header_1.png 300w, images/universe-day1-header_2.png 1600w, images/universe-day1-header_6.png 800w, images/universe-day1-header_5.png 400w, images/universe-day1-header_7.png 1032w, images/universe-day1-header_3.png 516w, images/universe-day1-header_4.png 1200w"
+											sizes="(max-width: 400px) 100vw, 400px">
+									</div>
+								</div>
+								<div class="col-12 col-lg-8">
+									<h3 class="h6-mktg mb-2">
+										<a href="https://github.blog/news-insights/product-news/universe-2024-previews-releases/"
+											class="Link--primary card__link">
+											New from Universe 2024: Get the latest previews and releases </a>
+									</h3>
+									<div class="f4-mktg color-fg-muted">
+										<p>Find out how we’re evolving GitHub and GitHub Copilot—and get access to the
+											latest previews and GA releases.</p>
+									</div>
+									<footer>
+										<div class="d-flex flex-items-center mb-6px">
+											<span>
+												<span class="text-bold">
+													<a href="https://github.blog/author/mariorod/"
+														title="Posts by Mario Rodriguez"
+														class="author url fn Link--primary no-wrap position-relative z-2"
+														rel="author">Mario Rodriguez</a> </span>
+												<span class="mx-1 color-fg-muted">·</span>
+												<time datetime="2024-10-29"
+													class="text-mono color-fg-muted no-wrap">October 29, 2024</time>
+											</span>
+										</div>
+									</footer>
+								</div>
+							</div>
+						</article>
+						<article class="color-border-muted card">
+							<div class="d-flex flex-column flex-sm-row flex-sm-nowrap gutter-14px">
+								<div class="col-12 col-lg-5 square-thumb-wrap mb-3 mb-sm-0">
+									<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
+										<svg aria-hidden="true" width="168" height="168"
+											class="width-full height-auto d-none d-sm-block" role="presentation"></svg>
+										<img width="200" height="200" loading="lazy"
+											src="images/205x205-Blog-Featured-Square-Light-Mode-3.png"
+											class="d-none d-sm-block cover-image tease-thumbnail__img" alt=""
+											decoding="async"
+											srcset="images/205x205-Blog-Featured-Square-Light-Mode-3_7.png 410w, images/205x205-Blog-Featured-Square-Light-Mode-3_5.png 150w, images/205x205-Blog-Featured-Square-Light-Mode-3_1.png 300w, images/205x205-Blog-Featured-Square-Light-Mode-3_4.png 400w, images/205x205-Blog-Featured-Square-Light-Mode-3_2.png 200w, images/205x205-Blog-Featured-Square-Light-Mode-3_3.png 90w, images/205x205-Blog-Featured-Square-Light-Mode-3_6.png 116w"
+											sizes="(max-width: 200px) 100vw, 200px"> <svg aria-hidden="true"
+											width="1032" height="548" class="width-full height-auto d-block d-sm-none"
+											role="presentation"></svg>
+										<img width="400" height="212" src="images/hero-image-github-universe-2024.png" loading="lazy"
+											class="d-block d-sm-none cover-image tease-thumbnail__img wp-post-image"
+											alt="" decoding="async"
+											srcset="images/hero-image-github-universe-2024_4.png 300w, images/hero-image-github-universe-2024_5.png 800w, images/hero-image-github-universe-2024_1.png 400w, images/hero-image-github-universe-2024_3.png 1032w, images/hero-image-github-universe-2024_2.png 516w, images/hero-image-github-universe-2024_6.png 1200w"
+											sizes="(max-width: 400px) 100vw, 400px">
+									</div>
+								</div>
+								<div class="col-12 col-lg-8">
+									<h3 class="h6-mktg mb-2">
+										<a href="https://github.blog/news-insights/product-news/bringing-developer-choice-to-copilot/"
+											class="Link--primary card__link">
+											Bringing developer choice to Copilot with Anthropic’s Claude 3.5 Sonnet,
+											Google’s Gemini 1.5 Pro, and OpenAI’s o1-preview </a>
+									</h3>
+									<div class="f4-mktg color-fg-muted">
+										<p>At GitHub Universe, we announced Anthropic’s Claude 3.5 Sonnet, Google’s
+											Gemini 1.5 Pro, and OpenAI’s o1-preview and o1-mini are coming to GitHub
+											Copilot—bringing a new level of choice to every developer. </p>
+									</div>
+									<footer>
+										<div class="d-flex flex-items-center mb-6px">
+											<span>
+												<span class="text-bold">
+													<a href="https://github.blog/author/ashtom/"
+														title="Posts by Thomas Dohmke"
+														class="author url fn Link--primary no-wrap position-relative z-2"
+														rel="author">Thomas Dohmke</a> </span>
+												<span class="mx-1 color-fg-muted">·</span>
+												<time datetime="2024-10-29"
+													class="text-mono color-fg-muted no-wrap">October 29, 2024</time>
+											</span>
+										</div>
+									</footer>
+								</div>
+							</div>
+						</article>
+						<article class="color-border-muted card">
+							<div class="d-flex flex-column flex-sm-row flex-sm-nowrap gutter-14px">
+								<div class="col-12 col-lg-5 square-thumb-wrap mb-3 mb-sm-0">
+									<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
+										<svg aria-hidden="true" width="168" height="168"
+											class="width-full height-auto d-none d-sm-block" role="presentation"></svg>
+										<img width="200" height="200"
+											src="images/205x205-Blog-Featured-Square-Dark-Mode-1-1.png" loading="lazy"
+											class="d-none d-sm-block cover-image tease-thumbnail__img" alt=""
+											decoding="async"
+											srcset="images/205x205-Blog-Featured-Square-Dark-Mode-1-1_7.png 410w, images/205x205-Blog-Featured-Square-Dark-Mode-1-1_1.png 150w, images/205x205-Blog-Featured-Square-Dark-Mode-1-1_5.png 300w, images/205x205-Blog-Featured-Square-Dark-Mode-1-1_6.png 400w, images/205x205-Blog-Featured-Square-Dark-Mode-1-1_2.png 200w, images/205x205-Blog-Featured-Square-Dark-Mode-1-1_4.png 90w, images/205x205-Blog-Featured-Square-Dark-Mode-1-1_3.png 116w"
+											sizes="(max-width: 200px) 100vw, 200px"> <svg aria-hidden="true"
+											width="1032" height="548" class="width-full height-auto d-block d-sm-none"
+											role="presentation"></svg>
+										<img width="400" height="212" src="images/diversity-2024.png" loading="lazy"
+											class="d-block d-sm-none cover-image tease-thumbnail__img wp-post-image"
+											alt="" decoding="async"
+											srcset="images/diversity-2024_1.png 300w, images/diversity-2024_6.png 800w, images/diversity-2024_3.png 400w, images/diversity-2024_5.png 1032w, images/diversity-2024_2.png 516w, images/diversity-2024_4.png 1200w"
+											sizes="(max-width: 400px) 100vw, 400px">
+									</div>
+								</div>
+								<div class="col-12 col-lg-8">
+									<h3 class="h6-mktg mb-2">
+										<a href="https://github.blog/news-insights/company-news/diversity-inclusion-and-belonging-at-github-in-2024/"
+											class="Link--primary card__link">
+											Diversity, inclusion, and belonging at GitHub in 2024 </a>
+									</h3>
+									<div class="f4-mktg color-fg-muted">
+										<p>From advancing ethical AI practices to expanding open source learning for
+											developers in Africa, discover how we’ve fostered diversity, inclusion, and
+											belonging this year.</p>
+									</div>
+									<footer>
+										<div class="d-flex flex-items-center mb-6px">
+											<span>
+												<span class="text-bold">
+													<a href="https://github.blog/author/jtgithubhr/"
+														title="Posts by Justin Thenutai"
+														class="author url fn Link--primary no-wrap position-relative z-2"
+														rel="author">Justin Thenutai</a> </span>
+												<span class="mx-1 color-fg-muted">·</span>
+												<time datetime="2024-10-23"
+													class="text-mono color-fg-muted no-wrap">October 23, 2024</time>
+											</span>
+										</div>
+									</footer>
+								</div>
+							</div>
+						</article>
+						<article class="color-border-muted card">
+							<div class="d-flex flex-column flex-sm-row flex-sm-nowrap gutter-14px">
+								<div class="col-12 col-lg-5 square-thumb-wrap mb-3 mb-sm-0">
+									<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
+										<svg aria-hidden="true" width="168" height="168"
+											class="width-full height-auto d-none d-sm-block" role="presentation"></svg>
+										<img width="200" height="200" src="images/1200x630-GHNonprofits_BlogC%402x.png" loading="lazy"
+											class="d-none d-sm-block cover-image tease-thumbnail__img wp-post-image"
+											alt="" decoding="async"
+											srcset="images/1200x630-GHNonprofits_BlogC%402x_2.png 150w, images/1200x630-GHNonprofits_BlogC%402x_3.png 1200w, images/1200x630-GHNonprofits_BlogC%402x_12.png 600w, images/1200x630-GHNonprofits_BlogC%402x_4.png 400w, images/1200x630-GHNonprofits_BlogC%402x_10.png 200w, images/1200x630-GHNonprofits_BlogC%402x_13.png 1000w, images/1200x630-GHNonprofits_BlogC%402x_11.png 90w, images/1200x630-GHNonprofits_BlogC%402x_9.png 116w"
+											sizes="(max-width: 200px) 100vw, 200px"> <svg aria-hidden="true"
+											width="1032" height="548" class="width-full height-auto d-block d-sm-none"
+											role="presentation"></svg>
+										<img width="400" height="212"
+											src="images/1200x630-GHNonprofits_BlogC%402x_1.png"
+											class="d-block d-sm-none cover-image tease-thumbnail__img wp-post-image" loading="lazy"
+											alt="" decoding="async"
+											srcset="images/1200x630-GHNonprofits_BlogC%402x_5.png 300w, images/1200x630-GHNonprofits_BlogC%402x_15.png 1600w, images/1200x630-GHNonprofits_BlogC%402x_6.png 800w, images/1200x630-GHNonprofits_BlogC%402x_4.png 400w, images/1200x630-GHNonprofits_BlogC%402x_8.png 1032w, images/1200x630-GHNonprofits_BlogC%402x_7.png 516w, images/1200x630-GHNonprofits_BlogC%402x_14.png 1200w"
+											sizes="(max-width: 400px) 100vw, 400px">
+									</div>
+								</div>
+								<div class="col-12 col-lg-8">
+									<h3 class="h6-mktg mb-2">
+										<a href="https://github.blog/news-insights/product-news/github-for-nonprofits-drive-social-impact-one-commit-at-a-time/"
+											class="Link--primary card__link">
+											GitHub for Nonprofits: Drive social impact one commit at a time </a>
+									</h3>
+									<div class="f4-mktg color-fg-muted">
+										<p>Now, it’s easier than ever for nonprofits to receive GitHub product
+											discounts.</p>
+									</div>
+									<footer>
+										<div class="d-flex flex-items-center mb-6px">
+											<span>
+												<span class="text-bold">
+													<a href="https://github.blog/author/sidespinosa/"
+														title="Posts by Sidney Espinosa"
+														class="author url fn Link--primary no-wrap position-relative z-2"
+														rel="author">Sidney Espinosa</a> </span>
+												<span class="mx-1 color-fg-muted">·</span>
+												<time datetime="2024-10-17"
+													class="text-mono color-fg-muted no-wrap">October 17, 2024</time>
+											</span>
+										</div>
+									</footer>
+								</div>
+							</div>
+						</article>
+						<article class="color-border-muted card">
+							<div class="d-flex flex-column flex-sm-row flex-sm-nowrap gutter-14px">
+								<div class="col-12 col-lg-5 square-thumb-wrap mb-3 mb-sm-0">
+									<div class="d-block position-relative rounded-2 overflow-hidden tease-thumbnail">
+										<svg aria-hidden="true" width="168" height="168"
+											class="width-full height-auto d-none d-sm-block" role="presentation"></svg>
+										<img width="200" height="200"
+											src="images/205x205-Blog-Featured-Square-Light-Mode-1.png" loading="lazy"
+											class="d-none d-sm-block cover-image tease-thumbnail__img" alt=""
+											decoding="async"
+											srcset="images/205x205-Blog-Featured-Square-Light-Mode-1_1.png 410w, images/205x205-Blog-Featured-Square-Light-Mode-1_2.png 150w, images/205x205-Blog-Featured-Square-Light-Mode-1_3.png 300w, images/205x205-Blog-Featured-Square-Light-Mode-1_5.png 400w, images/205x205-Blog-Featured-Square-Light-Mode-1_7.png 200w, images/205x205-Blog-Featured-Square-Light-Mode-1_4.png 90w, images/205x205-Blog-Featured-Square-Light-Mode-1_6.png 116w"
+											sizes="(max-width: 200px) 100vw, 200px"> <svg aria-hidden="true"
+											width="1032" height="548" class="width-full height-auto d-block d-sm-none"
+											role="presentation"></svg>
+										<img width="400" height="212" src="images/1200x630-Blog-Banner-Light-Mode-1.png" loading="lazy"
+											class="d-block d-sm-none cover-image tease-thumbnail__img wp-post-image"
+											alt="" decoding="async"
+											srcset="images/1200x630-Blog-Banner-Light-Mode-1_3.png 300w, images/1200x630-Blog-Banner-Light-Mode-1_5.png 800w, images/1200x630-Blog-Banner-Light-Mode-1_4.png 400w, images/1200x630-Blog-Banner-Light-Mode-1_2.png 1032w, images/1200x630-Blog-Banner-Light-Mode-1_1.png 516w, images/1200x630-Blog-Banner-Light-Mode-1_6.png 1200w"
+											sizes="(max-width: 400px) 100vw, 400px">
+									</div>
+								</div>
+								<div class="col-12 col-lg-8">
+									<h3 class="h6-mktg mb-2">
+										<a href="https://github.blog/news-insights/company-news/career-growth-learning-and-fun-oh-my-your-guide-to-github-universe-2024/"
+											class="Link--primary card__link">
+											Career growth, learning, and fun, oh my! Your guide to GitHub Universe 2024
+										</a>
+									</h3>
+									<div class="f4-mktg color-fg-muted">
+										<p>Dive into a whirlwind of insights, inspiring sessions, and mingle with
+											industry leaders at this year’s Universe. Get your tickets now before
+											they’re gone! </p>
+									</div>
+									<footer>
+										<div class="d-flex flex-items-center mb-6px">
+											<span>
+												<span class="text-bold">
+													<a href="https://github.blog/author/ruizjeimy/"
+														title="Posts by Jeimy Ruiz"
+														class="author url fn Link--primary no-wrap position-relative z-2"
+														rel="author">Jeimy Ruiz</a> </span>
+												<span class="mx-1 color-fg-muted">·</span>
+												<time datetime="2024-10-17"
+													class="text-mono color-fg-muted no-wrap">October 17, 2024</time>
+											</span>
+										</div>
+									</footer>
+								</div>
+							</div>
+						</article>
+					</div>
+					<div class="mt-5 text-right d-lg-none">
+						<a href="https://github.blog/news-insights/" target="_self"
+							class="Link--primary arrow-target-mktg text-semibold">More News &amp; insights articles<svg
+								viewBox="0 0 16 16" width="24" height="24" class="octicon arrow-symbol-mktg ml-1"
+								role="presentation">
+								<path
+									d="M7.28033 3.21967C6.98744 2.92678 6.51256 2.92678 6.21967 3.21967C5.92678 3.51256 5.92678 3.98744 6.21967 4.28033L7.28033 3.21967ZM11 8L11.5303 8.53033C11.8232 8.23744 11.8232 7.76256 11.5303 7.46967L11 8ZM6.21967 11.7197C5.92678 12.0126 5.92678 12.4874 6.21967 12.7803C6.51256 13.0732 6.98744 13.0732 7.28033 12.7803L6.21967 11.7197ZM6.21967 4.28033L10.4697 8.53033L11.5303 7.46967L7.28033 3.21967L6.21967 4.28033ZM10.4697 7.46967L6.21967 11.7197L7.28033 12.7803L11.5303 8.53033L10.4697 7.46967Z">
+								</path>
+								<path class="octicon-chevrow-stem" stroke="currentColor" d="M1.75 8H11"
+									stroke-width="1.5" stroke-linecap="round"></path>
+							</svg></a>
+					</div>
+				</section>
+			</div>
+		</div> {% endcomment %}
+
+		{% comment %} <div data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark" class="color-bg-subtle">
+			<section class="container-xl py-7 py-md-9 mx-auto p-responsive-blog">
+				<h2 class="h3-mktg mb-2 mb-md-4 text-center color-fg-default">
+					Block For Cards Views </h2>
+				<div class="d-flex flex-wrap ml-md-n4">
+					<div class="col-12 col-md-6 col-lg-3 d-flex mt-4 mt-lg-6 pl-md-4">
+						<div
+							class="border rounded-3 color-border-subtle color-bg-default d-flex flex-column flex-items-start width-full p-5 f4-mktg color-fg-muted">
+							<img src="images/Icon-Circle.svg" loading="lazy" width="44" height="44" class="width-auto d-block mb-3"
+								alt="Docs">
+							<h3 class="f3-mktg text-bold color-fg-default mb-3">
+								Docs </h3>
+							<div class="mb-auto">
+
+								<p>Everything you need to master GitHub, all in one place.</p>
+
+							</div>
+							<div class="mt-7">
+								<a data-analytics-click="Blog, click on module, text: Go to Docs; ref_location:bottom recirculation;"
+									href="https://docs.github.com/" class="text-semibold arrow-target-mktg"
+									target="_blank" aria-label="Go to Docs">
+									Go to Docs <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
+										height="16" class="octicon octicon-link-external ml-1">
+										<path fill-rule="evenodd"
+											d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z">
+										</path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-3 d-flex mt-4 mt-lg-6 pl-md-4">
+						<div
+							class="border rounded-3 color-border-subtle color-bg-default d-flex flex-column flex-items-start width-full p-5 f4-mktg color-fg-muted">
+							<img src="images/Icon_95220f.svg" loading="lazy" width="44" height="44" class="width-auto d-block mb-3"
+								alt="GitHub">
+							<h3 class="f3-mktg text-bold color-fg-default mb-3">
+								GitHub </h3>
+							<div class="mb-auto">
+
+								<p>Build what’s next on GitHub, the place for anyone from anywhere to build anything.
+								</p>
+
+							</div>
+							<div class="mt-7">
+								<a data-analytics-click="Blog, click on module, text: Start building; ref_location:bottom recirculation;"
+									href="https://github.com/" class="text-semibold arrow-target-mktg" target="_blank"
+									aria-label="Start building">
+									Start building <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+										width="16" height="16" class="octicon octicon-link-external ml-1">
+										<path fill-rule="evenodd"
+											d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z">
+										</path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-3 d-flex mt-4 mt-lg-6 pl-md-4">
+						<div
+							class="border rounded-3 color-border-subtle color-bg-default d-flex flex-column flex-items-start width-full p-5 f4-mktg color-fg-muted">
+							<img src="images/Icon_da43dc.svg" width="44" height="44" class="width-auto d-block mb-3"
+								alt="Customer stories">
+							<h3 class="f3-mktg text-bold color-fg-default mb-3">
+								Customer stories </h3>
+							<div class="mb-auto">
+
+								<p>Meet the companies and engineering teams that build with GitHub.</p>
+
+							</div>
+							<div class="mt-7">
+								<a data-analytics-click="Blog, click on module, text: Learn more; ref_location:bottom recirculation;"
+									href="https://github.com/customer-stories" class="text-semibold arrow-target-mktg"
+									target="_blank" aria-label="Learn more">
+									Learn more <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
+										height="16" class="octicon octicon-link-external ml-1">
+										<path fill-rule="evenodd"
+											d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z">
+										</path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-md-6 col-lg-3 d-flex mt-4 mt-lg-6 pl-md-4">
+						<div
+							class="border rounded-3 color-border-subtle color-bg-default d-flex flex-column flex-items-start width-full p-5 f4-mktg color-fg-muted">
+							<img src="images/Icon.svg" width="44" height="44" class="width-auto d-block mb-3"
+								alt="GitHub Universe 2024">
+							<h3 class="f3-mktg text-bold color-fg-default mb-3">
+								GitHub Universe 2024 </h3>
+							<div class="mb-auto">
+
+								<p>Get tickets to the 10th anniversary of our global developer event on AI, DevEx, and
+									security.</p>
+
+							</div>
+							<div class="mt-7">
+								<a data-analytics-click="Blog, click on module, text: Get tickets; ref_location:bottom recirculation;"
+									href="https://githubuniverse.com/?utm_source=Blog&amp;utm_medium=GitHub&amp;utm_campaign=blog-module"
+									class="text-semibold arrow-target-mktg" target="_blank" aria-label="Get tickets">
+									Get tickets <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16"
+										height="16" class="octicon octicon-link-external ml-1">
+										<path fill-rule="evenodd"
+											d="M10.604 1h4.146a.25.25 0 01.25.25v4.146a.25.25 0 01-.427.177L13.03 4.03 9.28 7.78a.75.75 0 01-1.06-1.06l3.75-3.75-1.543-1.543A.25.25 0 0110.604 1zM3.75 2A1.75 1.75 0 002 3.75v8.5c0 .966.784 1.75 1.75 1.75h8.5A1.75 1.75 0 0014 12.25v-3.5a.75.75 0 00-1.5 0v3.5a.25.25 0 01-.25.25h-8.5a.25.25 0 01-.25-.25v-8.5a.25.25 0 01.25-.25h3.5a.75.75 0 000-1.5h-3.5z">
+										</path>
+									</svg>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div> {% endcomment %}
 	</main>
 
-		<div data-color-mode="dark" data-light-theme="light" data-dark-theme="dark">
+
+
+
+	
+	<div data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark">
 		<footer class="footer pt-6">
 
 
@@ -953,7 +1546,6 @@
 			</div>
 		</footer>
 	</div>
-
 	<div id="ghcc" style="position: sticky; bottom: 0; z-index: 99999;"></div>
 	<script src="{% static 'assets/js/ghcc.min.js' %}" id="github_cookie_consent-js"></script>
 	<script src="js/ms.analytics-web-4.js" id="github_microsoft_analytics-js"></script>

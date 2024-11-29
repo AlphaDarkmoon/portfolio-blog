@@ -15,7 +15,7 @@ from .forms import NewsletterSubscriptionForm
 from django.shortcuts import render, redirect
 from .forms import NewsletterSubscriptionForm
 
-def github(request):
+def blogsHome(request):
     # Handle form submission
     if request.method == 'POST':
         form = NewsletterSubscriptionForm(request.POST)
@@ -26,7 +26,7 @@ def github(request):
         form = NewsletterSubscriptionForm()
 
     # Return the main page with the form (in case it's a GET request)
-    return render(request, "github.html", {
+    return render(request, "blogs-Home.html", {
         'posts': Post.objects.filter(user_id=request.user.id).order_by("id").reverse(),
         'top_posts': Post.objects.all().order_by("-likes"),
         'recent_posts': Post.objects.all().order_by("-id"),
@@ -37,11 +37,11 @@ def github(request):
 
 
 
-def search(request):
+def searchResult(request):
     query = request.GET.get('q', '').strip()  # Get query from GET request
     
     if not query:  # Handle cases where query is None or empty
-        return render(request, "search.html", {
+        return render(request, "search-Result.html", {
             'query': None,
             'page_obj': None,
             'media_url': settings.MEDIA_URL,
@@ -58,13 +58,13 @@ def search(request):
     page_obj = paginator.get_page(page_number)
     
     # Render the results page
-    return render(request, "search.html", {
+    return render(request, "search-Result.html", {
         'query': query,
         'page_obj': page_obj,
         'media_url': settings.MEDIA_URL,
     })
 
-def all_posts(request):
+def postList(request):
     posts = Post.objects.all().order_by('-id')  # Get all posts
     
     paginator = Paginator(posts, 6)  # Paginator to display 6 posts per page
@@ -72,7 +72,7 @@ def all_posts(request):
     page_obj = paginator.get_page(page_number)
 
     # Render the all posts page
-    return render(request, "posts.html", {
+    return render(request, "posts-List.html", {
         'page_obj': page_obj,
         'media_url': settings.MEDIA_URL,
     })
@@ -88,10 +88,10 @@ def blog(request):
     
     
 
-def post(request, slug):  # Use slug instead of id
+def postExpend(request, slug):  # Use slug instead of id
     post = get_object_or_404(Post, slug=slug)
     
-    return render(request, "git-posts.html", {
+    return render(request, "post-Expend.html", {
         "user": request.user,
         "post": post,
         "recent_posts": Post.objects.all().order_by("-id"),
@@ -101,5 +101,5 @@ def post(request, slug):  # Use slug instead of id
     })
     
 def confirmation(request):
-    return render(request, "confirmation.html")
+    return render(request, "newslatter-Confirmation.html")
 

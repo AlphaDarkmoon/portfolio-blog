@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "myapp",
     "portfolio_app",
-    "ckeditor",
+    "ckeditor", #WYSIWYG Editor
+    "imagekit", #optimize images
 ]
 
 MIDDLEWARE = [

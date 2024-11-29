@@ -575,7 +575,7 @@
 </head>
 
 <body class="home page-template-default page page-id-78933 font-mktg no-sidebar">
-	<div data-color-mode="dark" data-light-theme="light" data-dark-theme="dark" class="pt-header pt-lg-0">
+	<div data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark" class="pt-header pt-lg-0">
 		<header id="header"
 			class="header position-fixed position-lg-static pb-lg-header z-4 top-0 left-0 right-0 d-flex flex-column flex-items-stretch color-bg-default">
 			<a href="#start-of-content" class="p-3 color-bg-accent-emphasis color-fg-on-emphasis show-on-focus">
@@ -619,7 +619,7 @@
 							action="{% url 'blogs:search' %}" method="get" aria-hidden="true" aria-label="Search form"
 							role="search">
 							<div class="position-relative d-flex flex-1 height-full color-bg-transparent"
-								data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+								data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark">
 								<input aria-label="Search the blog" type="search"
 									class="p-2 pl-3 pr-6 border-0 rounded-2 flex-1" placeholder="Search the blog…"
 									value="" name="q" id="search-input">
@@ -695,8 +695,8 @@
 			<form id="mobile-search" role="search" method="get" class="mobile-search" action="{% url 'blogs:search' %}"
 				aria-hidden="true" aria-label="Search form">
 				<div class="d-flex flex-1 p-3 color-bg-inset">
-					<div class="d-flex flex-1 position-relative color-bg-transparent" data-color-mode="light"
-						data-light-theme="light" data-dark-theme="dark">
+					<div class="d-flex flex-1 position-relative color-bg-transparent" data-color-mode="dark"
+						data-light-theme="dark" data-dark-theme="dark">
 						<svg height="20" class="d-flex position-absolute z-3 octicon height-full ml-2 color-fg-subtle"
 							aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="20" role="img">
 							<path fill-rule="evenodd"
@@ -713,11 +713,10 @@
 				</div>
 			</form>
 			<nav id="mobile-menu" class="mobile-menu position-relative overflow-y-auto flex-1 width-full rounded-top-3"
-				aria-label="Navigation menu" aria-hidden="true" data-color-mode="light" data-light-theme="light"
+				aria-label="Navigation menu" aria-hidden="true" data-color-mode="dark" data-light-theme="dark"
 				data-dark-theme="dark_dimmed">
 				<div class="p-5">
-					<h2 class="mb-5 text-bold color-fg-subtle">Categories</h2>
-					<ul id="menu-secondary-navigation" class="pt-5 border-top list-style-none">
+					<ul id="menu-secondary-navigation" class="pt-0 list-style-none">
 						<li id="menu-item-78809"><a href="{% url 'blogs:blogs-home' %}"
 							class="position-relative d-flex flex-items-center flex-start no-wrap py-2 px-4 f4 lh-condensed-ultra Link--secondary color-fg-default text-medium">Home</a>
 					</li>
@@ -749,7 +748,7 @@
     <div class="mx-auto col-8 col-md-5 text-center mb-5 mb-md-0">
       <div class="d-inline-block position-relative">
         <svg aria-hidden="true" width="318" height="318" class="width-full height-auto d-block" style="visibility: hidden; pointer-events: none;"></svg>
-        <img width="400" height="400" src="https://img.icons8.com/external-obivous-color-kerismaker/48/external-heart-love-valentines-day-color-obivous-color-kerismaker-7.png" class="width-full height-auto cover-image wp-post-image" alt="" decoding="async" >      </div>
+        <img width="400" height="400" src="{% static 'assets/images/logo.jpg' %}" style="border-radius: 50%;" class="width-full height-auto cover-image wp-post-image" alt="" decoding="async" >      </div>
     </div>
     <div class="col-12 col-md-7">
       <h1 class="h3-mktg" style="margin-bottom: 20px;">Thanks for subscribing!</h1>
@@ -772,7 +771,7 @@ Don't forgot to checkout my new blogs here.</span></p>
 
 
 	
-<div data-color-mode="dark" data-light-theme="light" data-dark-theme="dark">
+<div data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark">
 	<footer class="footer pt-6">
 
 

@@ -6,7 +6,7 @@
 	<!-- 
     HTML Page: Yash-Insights
     Author: Yash ( [github] AlphaDarkmoon )
-    Description: Blogs Website,sub-branch of Yash's Portfolio {'{% url 'portfolio:portfolio' %}}.
+    Description: Blogs Website,sub-branch of Yash's Portfolio {https://alphadarkmoon.github.io/yash-portfolio/}.
 
     External Resources Credits:
     - GitHub assets: https://github.githubassets.com/
@@ -574,11 +574,11 @@
 	<script src="js/wp-emoji-release.min.js" defer=""></script>
 </head>
 
-<body class="home page-template-default page page-id-78933 font-mktg no-sidebar">
+<body class="home page-template-default page page-id-78933 font-mktg no-sidebar" style="height=100%;display:flex;flex-direction: column;">
 
     <!-- NevBar-->
 
-    <div data-color-mode="dark" data-light-theme="light" data-dark-theme="dark" class="pt-header pt-lg-0">
+    <div data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark" class="pt-header pt-lg-0">
 		<header id="header"
 			class="header position-fixed position-lg-static pb-lg-header z-4 top-0 left-0 right-0 d-flex flex-column flex-items-stretch color-bg-default">
 			<a href="#start-of-content" class="p-3 color-bg-accent-emphasis color-fg-on-emphasis show-on-focus">
@@ -604,15 +604,16 @@
 										d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z">
 									</path>
 								</svg></a></li>
+							
 						</ul>
 					</nav>
-                    
+
 					<div class="d-none d-lg-flex flex-1">
 						<form id="desktop-search" class="desktop-search position-relative ml-lg-4 flex-1"
 							action="{% url 'blogs:search' %}" method="get" aria-hidden="true" aria-label="Search form"
 							role="search">
 							<div class="position-relative d-flex flex-1 height-full color-bg-transparent"
-								data-color-mode="light" data-light-theme="light" data-dark-theme="dark">
+								data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark">
 								<input aria-label="Search the blog" type="search"
 									class="p-2 pl-3 pr-6 border-0 rounded-2 flex-1" placeholder="Search the blog…"
 									value="" name="q" id="search-input">
@@ -688,8 +689,8 @@
 			<form id="mobile-search" role="search" method="get" class="mobile-search" action="{% url 'blogs:search' %}"
 				aria-hidden="true" aria-label="Search form">
 				<div class="d-flex flex-1 p-3 color-bg-inset">
-					<div class="d-flex flex-1 position-relative color-bg-transparent" data-color-mode="light"
-						data-light-theme="light" data-dark-theme="dark">
+					<div class="d-flex flex-1 position-relative color-bg-transparent" data-color-mode="dark"
+						data-light-theme="dark" data-dark-theme="dark">
 						<svg height="20" class="d-flex position-absolute z-3 octicon height-full ml-2 color-fg-subtle"
 							aria-hidden="true" viewBox="0 0 16 16" version="1.1" width="20" role="img">
 							<path fill-rule="evenodd"
@@ -706,23 +707,24 @@
 				</div>
 			</form>
 			<nav id="mobile-menu" class="mobile-menu position-relative overflow-y-auto flex-1 width-full rounded-top-3"
-				aria-label="Navigation menu" aria-hidden="true" data-color-mode="light" data-light-theme="light"
+				aria-label="Navigation menu" aria-hidden="true" data-color-mode="dark" data-light-theme="dark"
 				data-dark-theme="dark_dimmed">
 				<div class="p-5">
-					<h2 class="mb-5 text-bold color-fg-subtle">Categories</h2>
-					<ul id="menu-secondary-navigation" class="pt-5 border-top list-style-none">
-						<li id="menu-item-78809"><a href="{% url 'blogs:blogs-home' %}"
-							class="position-relative d-flex flex-items-center flex-start no-wrap py-2 px-4 f4 lh-condensed-ultra Link--secondary color-fg-default text-medium">Home</a>
-					</li>
-					<li id="menu-item-78811"><a href="{% url 'blogs:posts' %}"
-						class="position-relative d-flex flex-items-center flex-start no-wrap py-2 px-4 f4 lh-condensed-ultra Link--secondary color-fg-default text-medium">Posts
-						<svg viewBox="0 0 16 16" width="16" height="16"
-							class="octicon octicon-chevron-down position-absolute right-0 d-block ml-1 mt-1"
-							role="presentation">
-							<path
-								d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z">
-							</path>
-						</svg></a></li>
+					<ul id="menu-secondary-navigation" class="pt-0 list-style-none">
+							<li id="menu-item-78809"><a href="{% url 'blogs:blogs-home' %}"
+									class="position-relative d-flex flex-items-center flex-start no-wrap py-2 px-4 f4 lh-condensed-ultra Link--secondary color-fg-default text-medium">Home</a>
+							</li>
+							<li id="menu-item-78811"><a href="{% url 'blogs:posts' %}"
+								class="position-relative d-flex flex-items-center flex-start no-wrap py-2 px-4 f4 lh-condensed-ultra Link--secondary color-fg-default text-medium">Posts
+								<svg viewBox="0 0 16 16" width="16" height="16"
+									class="octicon octicon-chevron-down position-absolute right-0 d-block ml-1 mt-1"
+									role="presentation">
+									<path
+										d="M3.75 2h3.5a.75.75 0 0 1 0 1.5h-3.5a.25.25 0 0 0-.25.25v8.5c0 .138.112.25.25.25h8.5a.25.25 0 0 0 .25-.25v-3.5a.75.75 0 0 1 1.5 0v3.5A1.75 1.75 0 0 1 12.25 14h-8.5A1.75 1.75 0 0 1 2 12.25v-8.5C2 2.784 2.784 2 3.75 2Zm6.854-1h4.146a.25.25 0 0 1 .25.25v4.146a.25.25 0 0 1-.427.177L13.03 4.03 9.28 7.78a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042l3.75-3.75-1.543-1.543A.25.25 0 0 1 10.604 1Z">
+									</path>
+								</svg></a></li>
+							
+						</ul>
 					</ul> <a data-analytics-click="Blog, click on button, text: Contact sales; ref_location:top nav;"
 						class="d-block no-wrap my-3 btn-mktg btn-muted-mktg font-weight-semibold"
 						href="{% url 'portfolio:portfolio' %}">My Portfolio</a>
@@ -735,15 +737,18 @@
 
 
 	<main id="start-of-content">
-		{% if page_obj and page_obj.object_list %}
+        {% if error %}
+        <p style="color: red;">{{ error }}</p>
+        {% elif page_obj and page_obj.object_list %}
 		<div class="mb-6 mb-lg-8">
-			<header data-color-mode="dark" data-light-theme="light" data-dark-theme="dark_dimmed"
-					class="archive-header">
+			<header data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark_dimmed"
+				class="archive-header">
 				<div class="container-xl mx-auto p-responsive-blog">
 					<div class="col-md-7">
 						<div class="py-5 pb-md-8 pt-md-6">
+							
 							<h1 class="h3-mktg lh-condensed color-fg-default">
-								All Posts</h1>
+								Search results for: <span class="text-semibold text-italic">{{ query }}</span> </h1>
 						</div>
 					</div>
 				</div>
@@ -752,23 +757,24 @@
 		<div class="container-xl mx-auto p-responsive-blog">
 			<div class="mb-8 mb-lg-10">
 				<div class="post-columns post-columns--3-3">
-					{% for post in page_obj.object_list %}
+                    {% for post in page_obj.object_list %}
 					<article class="color-border-muted card">
 						<div class="d-flex flex-column">
 							<div class="d-block col-12 position-relative rounded-2 mb-3 overflow-hidden tease-thumbnail"
-								 target="_self">
+								target="_self">
 								<svg aria-hidden="true" width="1032" height="548" class="width-full height-auto d-block"
-									 role="presentation"></svg>
-								<img width="400" height="212" src="{{media_url}}{{post.image}}"
-									 class="d-block cover-image tease-thumbnail__img wp-post-image" alt=""
-									 decoding="async" loading="lazy"
-									 sizes="(max-width: 400px) 100vw, 400px">
+									role="presentation"></svg>
+								<img width="400" height="212" src="{{ post.thumbnail.url }}" loading="lazy"
+									class="d-block cover-image tease-thumbnail__img wp-post-image" alt=""
+									decoding="async" loading="lazy"
+									sizes="(max-width: 400px) 100vw, 400px">
 							</div>
-							<div class="mb-1"><a class="f5-mktg text-gradient-purple-coral text-bold pb-1 position-relative z-2">{{post.category}}</a></div>
+							<div class="mb-1"><a 
+									class="f5-mktg text-gradient-purple-coral text-bold pb-1 position-relative z-2">{{post.category}}</a></div>
 							<h3 class="h6-mktg mb-2">
 								<a class="Link--primary card__link"
-								   href="{% url 'blogs:post' slug=post.slug %}"
-								   target="_self">
+									href="{% url 'blogs:post' slug=post.slug %}"
+									target="_self">
 									{{ post.postname }} </a>
 							</h3>
 							<div class="f4-mktg color-fg-muted">
@@ -779,52 +785,74 @@
 									<span>
 										<span class="mx-1 color-fg-muted"><i class="fa fa-calendar-o"></i></span>
 										<time datetime="2024-11-20"
-											  class="text-mono color-fg-muted no-wrap">{{post.time}} </time>
+											class="text-mono color-fg-muted no-wrap">{{post.time}} </time>
 									</span>
 								</div>
 							</footer>
 						</div>
 					</article>
-					{% endfor %}
+                    {% endfor %}
 				</div>
-				<div class="d-flex flex-justify-center flex-items-center flex-wrap paginate-container mt-6 mb-0 pt-5 border-top color-border-muted text-bold">
+				<div
+					class="d-flex flex-justify-center flex-items-center flex-wrap paginate-container mt-6 mb-0 pt-5 border-top color-border-muted text-bold">
+
 					<nav class="navigation pagination" aria-label="Posts">
-						<h2 class="screen-reader-text">Posts navigation</h2>
-						<div class="nav-links">
-							{% if page_obj.has_previous %}
-								<a class="prev_page page-numbers" href="?page={{ page_obj.previous_page_number }}">Previous</a>
-							{% endif %}
-	
-							{% for num in page_obj.paginator.page_range %}
-								{% if num == page_obj.number %}
-									<span aria-current="page" class="page-numbers current">
-										<span class="meta-nav screen-reader-text">Page </span>{{ num }}
-									 </span>
-								{% elif num == 1 or num == page_obj.paginator.num_pages %}
-									<a class="page-numbers" href="?page={{ num }}">
-										<span class="meta-nav screen-reader-text">Page </span>{{ num }}
-									</a>
-								{% elif forloop.first or forloop.last %}
-									<span class="page-numbers dots gap">…</span>
-								{% endif %}
-							{% endfor %}
-	
-							{% if page_obj.has_next %}
-								<a class="next_page page-numbers" href="?page={{ page_obj.next_page_number }}">Next</a>
-							{% endif %}
-						</div>
-					</nav>
+                        <h2 class="screen-reader-text">Posts navigation</h2>
+                        <div class="nav-links">
+                            {% if page_obj.has_previous %}
+                                <a class="prev_page page-numbers" href="?q={{ query }}&page={{ page_obj.previous_page_number }}">Previous</a>
+                            {% endif %}
+                    
+                            {% for num in page_obj.paginator.page_range %}
+                                {% if num == page_obj.number %}
+                                    <!-- Highlight the current page -->
+                                    <span aria-current="page" class="page-numbers current">
+                                        <span class="meta-nav screen-reader-text">Page </span>{{ num }}
+                                     </span>
+                                     
+                                {% elif num == 1 or num == page_obj.paginator.num_pages %}
+                                    <!-- Always show the first and last pages -->
+                                    <a class="page-numbers" href="?q={{ query }}&page={{ num }}">
+                                        <span class="meta-nav screen-reader-text">Page </span>{{ num }}
+                                    </a>
+                                {% elif forloop.first or forloop.last %}
+                                    <!-- Add ellipsis for skipped ranges -->
+                                    <span class="page-numbers dots gap">…</span>
+                                {% endif %}
+                            {% endfor %}
+                    
+                            {% if page_obj.has_next %}
+                                <a class="next_page page-numbers" href="?q={{ query }}&page={{ page_obj.next_page_number }}">Next</a>
+                            {% endif %}
+                        </div>
+                    </nav>
+                    
+                    
+                    
 				</div>
 			</div>
+            {% else %}
+			<div class="mb-6 mb-lg-8">
+				<header data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark_dimmed"
+					class="archive-header">
+					<div class="container-xl mx-auto p-responsive-blog">
+						<div class="col-md-7">
+							<div class="py-5 pb-md-8 pt-md-6">
+								
+								<h1 class="h3-mktg lh-condensed color-fg-default">
+									Search results for: <span class="text-semibold text-italic">{{ query }}</span> </h1>
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+        <div></div>
+    {% endif %}
 		</div>
-		{% else %}
-			<p>No posts available.</p>
-		{% endif %}
 	</main>
-	
 
-		<div data-color-mode="dark" data-light-theme="light" data-dark-theme="dark">
-		<footer class="footer pt-6">
+		<div data-color-mode="dark" data-light-theme="dark" data-dark-theme="dark">
+		<footer class="footer pt-6" style="position: relative;">
 
 
 			<div class="color-bg-subtle">
