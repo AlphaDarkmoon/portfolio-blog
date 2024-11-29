@@ -1,5 +1,4 @@
 from django.shortcuts import render
 
-# Create your views here.
 def portfolio(request):
-    return render(request,"index.html")
+    return render(request,"portfolio/index.html")

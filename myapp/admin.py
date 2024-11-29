@@ -1,30 +1,34 @@
 from django.contrib import admin
-from .models import Post,Comment,Contact
-# Register your models here.
+from django.db import models
+from tinymce.widgets import TinyMCE
+from .models import Post, Comment, Contact, NewsletterSubscription
 
-# admin.site.register(Post)
+# Register Comment and Contact models
 admin.site.register(Comment)
 admin.site.register(Contact)
 
-from .models import Post
-
+# Customize Admin Panel Headers
 admin.site.site_header = 'BLOGSPOT | ADMIN PANEL'
 admin.site.site_title = 'BLOGSPOT | BLOGGING WEBSITE'
-admin.site.index_title= 'BlogSpot Site Administration'
+admin.site.index_title = 'BlogSpot Site Administration'
 
+# Customize Post Admin
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = ('postname', 'category', 'time', 'likes', 'user')
     search_fields = ('postname', 'category', 'content')
     list_filter = ('category', 'time', 'user')
 
-from django.contrib import admin
-from .models import NewsletterSubscription
+    # Use TinyMCE for the 'content' field
+    formfield_overrides = {
+        models.TextField: {'widget': TinyMCE()},
+    }
 
+# Customize NewsletterSubscription Admin
 class NewsletterSubscriptionAdmin(admin.ModelAdmin):
-    list_display = ('email', 'subscribed_at')  # Columns to display in the admin list view
-    search_fields = ('email',)  # Allow searching by email address
-    list_filter = ('subscribed_at',)  # Filter by subscription date
-    ordering = ('-subscribed_at',)  # Order by subscription date, newest first
+    list_display = ('email', 'subscribed_at')
+    search_fields = ('email',) 
+    list_filter = ('subscribed_at',)
+    ordering = ('-subscribed_at',)
 
 admin.site.register(NewsletterSubscription, NewsletterSubscriptionAdmin)

@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "myapp",
     "portfolio_app",
-    "ckeditor", #WYSIWYG Editor
+    "tinymce", #WYSIWYG Editor
     "imagekit", #optimize images
 ]
 
@@ -131,4 +131,14 @@ CKEDITOR_CONFIGS = {
         'allowedContent': True,
         'extraAllowedContent': 'a[*];img[*]',
     },
+}
+
+TINYMCE_DEFAULT_CONFIG = {
+    "height": 500,
+    "width": 800,
+    "menubar": "file edit view insert format tools table help",
+    "plugins": "advlist autolink lists link image charmap print preview anchor "
+               "searchreplace visualblocks code fullscreen insertdatetime media table paste code help wordcount",
+    "toolbar": "undo redo | bold italic underline | alignleft aligncenter alignright alignjustify | "
+               "bullist numlist outdent indent | link image | preview code",
 }
