@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Banner</title>
+</head>
+<body>
+
+    <!-- Banner with inline CSS for background image, size, and raised effect -->
+    <div style="position: relative; wwidth: calc(100% - 40px);margin: 0 20px; height: 300px; background-image: url('https://via.placeholder.com/1200x300'); background-size: cover; background-position: center; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);">
+        <!-- Text inside the banner -->
+        <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 2em; font-weight: bold; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);">
+            Your Banner Text Here
+        </div>
+    </div>
+
+    <!-- Responsive behavior for smaller screens -->
+    <script>
+        if (window.innerWidth <= 768) {
+            var banner = document.querySelector('div[style*="position: relative"]');
+            banner.style.height = '200px'; // Adjust height for mobile devices
+            var bannerText = banner.querySelector('div');
+            bannerText.style.fontSize = '1.5em'; // Adjust font size for mobile devices
+        }
+    </script>
+
+</body>
+</html>

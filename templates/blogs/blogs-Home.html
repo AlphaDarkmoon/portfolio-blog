@@ -636,7 +636,7 @@
 							</svg>
 						</button>
 						<a data-analytics-click="Blog, click on button, text: My Portfolio; ref_location:top nav;"
-							class="no-wrap btn-mktg font-weight-semibold ml-3 js-header-cta header-cta"
+							class="no-wrap btn-mktg font-weight-semibold ml-3 js-header-cta header-cta" style="color:#fc1a51;"
 							href="{% url 'portfolio:portfolio' %}">My Portfolio</a>
 					</div>
 					<div class="d-flex d-lg-none flex-items-center flex-1 mr-n2">
@@ -728,6 +728,27 @@
 		<div class="py-7 pb-md-8 pb-lg-9 has-glow" data-color-mode="dark" data-light-theme="dark"
 			data-dark-theme="dark">
 			<div class="position-relative container-xl mx-auto p-responsive-blog">
+				<!-- Top-->
+				<section>
+					<div class="post-columns">
+						<article class="d-flex flex-column height-lg-full color-border-muted card">
+							<div
+								class="d-block col-12 position-relative rounded-2 mb-3 mb-md-4 overflow-hidden tease-thumbnail">
+								<svg aria-hidden="true" width="1200" height="300" class="width-full height-auto d-block"
+									role="presentation"></svg>
+								<img width="1200" height="300" src="{% static 'assets/images/banner-blogs.png' %}"
+									class="d-block cover-image tease-thumbnail__img wp-post-image" alt=""
+									decoding="async" sizes="(max-width: 1200px) 100vw, 1200px" loading="lazy">
+							</div>
+						</article>
+			
+
+					</div>
+				</section>
+				<!-- Top End-->
+
+
+				<!-- Mid-->
 				<section>
 					<div class="post-columns post-columns--4-2">
 						{% for post in recent_posts|slice:":1" %}
@@ -808,6 +829,8 @@
 						{% endfor %}
 					</div>
 				</section>
+				<!-- Mid End-->
+
 				<div class="mt-7 mt-lg-8">
 					<section id="newsletter" class="newsletter rounded-2">
 						<div class="color-bg-default rounded-2">
@@ -1555,6 +1578,14 @@
 		_stq.push(["view", JSON.parse("{\"v\":\"ext\",\"blog\":\"153214340\",\"post\":\"78933\",\"tz\":\"-8\",\"srv\":\"github.blog\",\"hp\":\"vip\",\"j\":\"1:13.9.1\"}")]);
 		_stq.push(["clickTrackerInit", "153214340", "78933"]);
 	</script>
+	<script>
+        if (window.innerWidth <= 768) {
+            var banner = document.querySelector('div[style*="position: relative"]');
+            banner.style.height = '120px'; // Adjust height for mobile devices
+            var bannerText = banner.querySelector('div');
+            bannerText.style.fontSize = '1.5em'; // Adjust font size for mobile devices
+        }
+    </script>
 	<script
 		type="text/javascript">window.NREUM || (NREUM = {}); NREUM.info = { "beacon": "bam.nr-data.net", "licenseKey": "229f494c49", "applicationID": "177966165", "transactionName": "NgFSYBZXCxJTUEVfCQ9LcVcQXwoPHVVDWQgVSUBVA1M=", "queueTime": 0, "applicationTime": 924, "atts": "GkZFFl5NGE0QUhMMHRwZ", "errorBeacon": "bam.nr-data.net", "agent": "" }</script>
 
