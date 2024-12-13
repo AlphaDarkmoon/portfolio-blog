@@ -3,3 +3,8 @@ django
 Pillow
 sqlparse
 tzdata
+python-decouple
+django-jazzmin
+django-tinymce
+django-imagekit
+django-ckeditor
